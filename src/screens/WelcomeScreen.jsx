@@ -2,7 +2,7 @@
 import Photo from "../assets/images/couch.jpg";
 import ButtonAddItem from "../components/ButtonAddItem";
 
-export default function Instructions({ items, setItems }) {
+export default function WelcomeScreen({ items, setItems }) {
   return (
     <div className="main-page">
       <div className="main-header">

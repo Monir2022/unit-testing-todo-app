@@ -8,7 +8,7 @@ import ShoppingList from "../components/ShoppingList";
 import ShoppingItem from "../components/ShoppingItem";
 import Sorter from "../components/Sorter";
 
-export default function NormalScreen({ items, setItems }) {
+export default function ShoppingScreen({ items, setItems }) {
   // Local state
   const [toggleCompletedList, setCompletedList] = useState(false);
 
