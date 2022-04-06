@@ -20,9 +20,8 @@ export default function ModalForm({ setModal }) {
     <div data-testid="modalForm" className="modalForm">
       <form onSubmit={(event) => handleSubmit(event)}>
         <h2>Add a new Product</h2>
-        <label>Item name</label>
+        <label>Item name:</label>
         <input
-        
           required
           type="text"
           value={name}
@@ -30,8 +29,7 @@ export default function ModalForm({ setModal }) {
           placeholder="Ex: Table"
           validation={validateName}
         />
-        
-        <label>Item price</label>
+        <label>Item price:</label>
         <input
           required
           type="number"

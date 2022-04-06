@@ -3,6 +3,7 @@
 @import "./base/typography.css";
 
 /*components*/
+@import "./components/welcome-screen.css";
 @import './components/normalScreen.css';
 @import './components/modalContainer.css';
 @import './components/buttonAddItem.css';
