@@ -6,7 +6,7 @@ import ShoppingScreen from "./screens/ShoppingScreen";
 import ModalContainer from "./components/ModalContainer";
 import { listState } from "./state/listState";
 
-import "./css/styles.css";
+import "./styles/styles.css";
 
 
 export default function App() {

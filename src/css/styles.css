@@ -1,9 +1,0 @@
-@import './_base/layout.css';
-@import './_base/variables.css';
-@import './templates/normalScreen.css';
-@import './templates/modalContainer.css';
-@import './templates/buttonAddItem.css';
-@import './templates/modalForm.css';
-@import './templates/shopping-item.css';
-@import './templates/sorter.css';
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
