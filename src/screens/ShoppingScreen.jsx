@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { listState } from "../state/listState";
-import ShoppingList from "./ShoppingList";
-import ButtonAddItem from "./ButtonAddItem";
-import Sorter from "./Sorter";
-export default function NormalScreen({ setModal }) {
+import ShoppingList from "../components/ShoppingList";
+import ButtonAddItem from "../components/ButtonAddItem";
+import Sorter from "../components/Sorter";
+
+export default function ShoppingScreen() {
   const [list, setList] = useRecoilState(listState);
   const [showAcquired, setShowAcquired] = useState(false);
   const acquiredList = list.filter((item) => item.acquired === true);

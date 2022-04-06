@@ -1,4 +1,4 @@
-import ButtonAddItem from "./ButtonAddItem";
+import ButtonAddItem from "../components/ButtonAddItem";
 export default function WelcomeScreen() {
   return (
     <div data-testid='welcomeScreen' className="welcome-screen">
@@ -9,10 +9,8 @@ export default function WelcomeScreen() {
       </p>
       <p>
         To get started press the Add new item button and a popup will ask you
-        the name and the price of the item you want to add. You can also and an
-        image after the item is added by touching the camera icon.
-      </p>
-      
+        the name and the price of the item you want to add. 
+      </p>      
       <ButtonAddItem />
     </div>
   );
