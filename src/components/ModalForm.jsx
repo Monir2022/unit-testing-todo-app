@@ -22,6 +22,7 @@ export default function ModalForm({ setModal }) {
         <h2>Add a new Product</h2>
         <label>Item name</label>
         <input
+        
           required
           type="text"
           value={name}
@@ -29,6 +30,7 @@ export default function ModalForm({ setModal }) {
           placeholder="Ex: Table"
           validation={validateName}
         />
+        
         <label>Item price</label>
         <input
           required

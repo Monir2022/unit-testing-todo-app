@@ -9,7 +9,7 @@
 }
 
 * {
-  background-color: black;
+  background-color: gray;
 }
 
 span,
@@ -22,9 +22,7 @@ span {
   font-family: 'Poppins', sans-serif;
 }
 
-/* button{
-  font-family: 'Poppins', sans-serif;
-} */
+
 
 .welcome-screen {
   max-width: 260px;

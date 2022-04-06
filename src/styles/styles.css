@@ -1,5 +1,6 @@
 @import './base/layout.css';
 @import './base/variables.css';
+@import "./base/typography.css";
 
 /*components*/
 @import './components/normalScreen.css';
