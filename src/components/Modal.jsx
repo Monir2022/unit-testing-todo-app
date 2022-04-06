@@ -2,7 +2,8 @@ import ReactDom from "react-dom";
 import { FaWindowClose } from "react-icons/fa";
 import { useRecoilState } from "recoil";
 import { modalState } from "../state/listState";
-export default function ModalContainer() {
+
+export default function Modal() {
   const [modal, setModal] = useRecoilState(modalState);
   
   if (modal === null) return null;

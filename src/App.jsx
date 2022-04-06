@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil";
 import Logo from "./assets/images/logo.jpg";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import ShoppingScreen from "./screens/ShoppingScreen";
-import ModalContainer from "./components/ModalContainer";
+import Modal from "./components/Modal";
 import { listState } from "./state/listState";
 
 import "./styles/styles.css";
@@ -34,7 +34,7 @@ export default function App() {
         <img src={Logo} alt="a logotype in blue and yellow that says eika" />
       </div>
       {list.length === 0 ? <WelcomeScreen /> : <ShoppingScreen />}
-      <ModalContainer />
+      <Modal />
     </div>
   );
 }
