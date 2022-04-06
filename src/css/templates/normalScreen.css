@@ -1,0 +1,14 @@
+.normal-screen .secondary-button{
+    background: rgb(250, 248, 248);
+    height: 40px;
+    color: gray;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 80px;
+    padding: 10px 10px;
+    margin: 12px 8px;
+    border: 2px solid transparent;
+    width: 180px;
+    cursor: pointer;
+    text-decoration: underline;
+}

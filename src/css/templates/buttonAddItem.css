@@ -1,0 +1,17 @@
+.button-wrapper {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+.button-wrapper button {
+  background: var(--main-bg-color);
+  height: 40px;
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 80px;
+  padding: 10px 24px 14px;
+  border: 2px solid transparent;
+  max-width: 300px;
+  cursor: pointer;
+}

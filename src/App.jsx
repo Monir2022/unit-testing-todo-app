@@ -1,41 +1,42 @@
-// NPM Packages
-import { useEffect, useState } from "react";
-// Project files
-import Logo from "./assets/images/logo.jpg";
-import WelcomeScreen from "./screens/WelcomeScreen";
-import ShoppingScreen from "./screens/ShoppingScreen";
-import "./styles/style.css";
+import { useEffect } from "react";
+import { useRecoilState } from "recoil";
+import WelcomeScreen from "./components/WelcomeScreen";
+import NormalScreen from "./components/NormalScreen";
+import ModalContainer from "./components/ModalContainer";
+import { listState } from "./state/listState";
+
+import cart from "./assets/images/cart.png";
+import "./css/styles.css";
 
 export default function App() {
-  // Local State
-  const [items, setItems] = useState([]);
+  const [list, setList] = useRecoilState(listState);
+  
+  const STORAGE_KEY = "shoppingList";
 
-  const storageKey = "STORAGE_KEY";
-
-  // Methods
-  useEffect(() => loadData(storageKey, setItems), []);
-  useEffect(() => saveData(storageKey, items), [items]);
-
-  function loadData(storageKey, setItems) {
+  function loadData(storageKey, setList) {
     const data = localStorage.getItem(storageKey);
-    const updatedData = JSON.parse(data) ?? [];
-    setItems(updatedData);
+    const parseddata = JSON.parse(data) ?? [];
+    setList(parseddata);
   }
 
-  function saveData(storageKey, items) {
-    const stringifyItems = JSON.stringify(items);
-    localStorage.setItem(storageKey, stringifyItems);
+  function saveData(storageKey, list) {
+    const stringifyList = JSON.stringify(list);
+    localStorage.setItem(storageKey, stringifyList);
   }
+
+  useEffect(() => loadData(STORAGE_KEY, setList), [setList]);
+  useEffect(() => saveData(STORAGE_KEY, list), [list]);
 
   return (
     <div className="App">
-      <div className="nav">
-        <img src={Logo} alt="a logotype in blue and yellow that says eika" />
-      </div>
-      {items.length === 0 && (
-        <WelcomeScreen items={items} setItems={setItems} />
+      <img src={cart} alt="" />
+      <h3> Your Shopping List</h3>
+      {list.length === 0 ? (
+        <WelcomeScreen  />
+      ) : (
+        <NormalScreen />
       )}
-      {items.length > 0 && <ShoppingScreen items={items} setItems={setItems} />}
+      <ModalContainer  />
     </div>
   );
 }

@@ -1,28 +1,22 @@
-export default function Sorter({ items, setItems }) {
-  // Methods
-  function sortListByName() {
-    const sorted = items.sort((a,b) => a.name.localeCompare(b.name));
+import { useRecoilState } from "recoil";
+import { sortByName, sortByPrice } from "../scripts/sortList";
+import { listState } from "../state/listState";
 
-    setItems([...sorted]);
-    localStorage.setItem("items", JSON.stringify(items));
+export default function Sorter() {
+  const [list, setList] = useRecoilState(listState);
+  function sortListByName(list) {
+    const sortedList = sortByName(list);
+    setList(sortedList);
   }
-
-  function sortListByPrice() {
-    const sorted = items.sort((a, b) => a.price - b.price);
-
-    setItems([...sorted]);
-    localStorage.setItem("items", JSON.stringify(items));
+  function sortListByPrice(list) {
+    const sortedList = sortByPrice(list);
+    setList(sortedList);
   }
-
   return (
-    <div className="sorting">
-      <p>Sort by:</p>
-      <button className="button-secondary" onClick={sortListByName}>
-        Name
-      </button>
-      <button className="button-secondary" onClick={sortListByPrice}>
-        Price
-      </button>
-    </div>
+    <section className='sorter'>
+      <span>Sort by:</span>
+      <button data-testid='byName' onClick={() => sortListByName(list)}>Name</button>
+      <button data-testid='byPrice'onClick={() => sortListByPrice(list)}>Price</button>
+    </section>
   );
 }

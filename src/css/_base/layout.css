@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  margin: 48px;
+}
+
+.App img {
+  max-width: 200px;
+  height: auto;
+}
+
+* {
+  background-color: black;
+}
+
+span,
+h2,
+h3,
+h1,
+p,
+span {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* button{
+  font-family: 'Poppins', sans-serif;
+} */
+
+.welcome-screen {
+  max-width: 260px;
+  margin: 0 auto;
+}

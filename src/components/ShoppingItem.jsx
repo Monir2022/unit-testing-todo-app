@@ -1,15 +1,26 @@
+export default function ShoppingItem({ item, editList }) {
+  const { name, price, acquired } = item;
+  function editItem(key, editedValue) {
+    const editedItem = { ...item };
 
-  export default function ShoppingItem({ item, markAsDone }) {
-    const { id, name, price, isDone } = item;
-    return (
-      <div className={isDone === false ? "items" : "completed-items"}>
-        {isDone === false && (
-          <div>
-            <input type="checkbox" onChange={() => markAsDone(id)} />
-          </div>
-        )}
-        <p>{name}</p>
-        <p>{price}:-</p>
-      </div>
-    );
+    editedItem[key] = editedValue;
+    editList(editedItem);
   }
+  return (
+    <section className="shopping-item">
+      <label className="container">
+        <input
+          data-testid='checkbox'
+          type="checkbox"
+          checked={acquired}
+          onChange={() => editItem("acquired", !acquired)}
+        />
+        <span className="checkmark"></span>
+      </label>
+      <span>{name}</span>
+      <span></span>
+      <span>{price}:-</span>
+      <p></p>
+    </section>
+  );
+}

@@ -1,0 +1,16 @@
+.sorter button {
+    background: rgb(242, 238, 238);
+      height: 40px;
+      color: gray;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 80px;
+      padding: 10px 10px;
+      margin: 8px 8px;
+      border: 2px solid transparent;
+      width: 80px;
+      cursor: pointer;
+    }
+    .sorter span{
+        color: gray;
+    }
