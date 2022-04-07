@@ -1,4 +1,4 @@
-import { getAllByTestId, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { RecoilRoot } from "recoil";
 import App from './App';
 
@@ -23,29 +23,28 @@ test("Expected to show the Welcome screen if the todo list is empty", () => {
 test("Expected to show the shopingscreen if the todo list has one or more items", () => {
 
   // Arrange
-  render(
+  const {getByTestId} = render(
     <RecoilRoot>
       <App />
     </RecoilRoot>)
 
-  const item = {
+  const data = [{
     id: 1,
     name: "Table",
     price: "100",
-    showAcquired: false,
-  };
-  const data = [item];
+    acquired: false,
+  },];
+  
 
   Storage.prototype.getItem = jest.fn(() => JSON.stringify(data));
-
   
 
   // Act
  
-  const textElement = screen.queryByText(/sort by:/i);
+  const divElement = getByTestId("shopping-screen")
 
   // Assert
-  expect(textElement).toBeInTheDoccument();
+  expect(divElement).toBeTruthy();
 });
 
 

@@ -9,7 +9,7 @@ export default function WelcomeScreen() {
         alt="A woman comming out of a store with 2 shoping bags"
       />
 
-      <h1>EIKA's shopping list</h1>
+      <h1>EIKA shopping list</h1>
       <p>
         Welcome to EIKA’s shopping list. Here you will be able to create a todo
         list with for the furniture you want to buy.

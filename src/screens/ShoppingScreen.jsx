@@ -19,6 +19,7 @@ export default function ShoppingScreen() {
   }
   return (
     <div data-testid ="shopping-Screen" className="normal-screen">
+      <h1>My shopping list</h1>
       <Sorter />
       <ShoppingList list={pendingList} editList={editList} />
       <ButtonAddItem />
