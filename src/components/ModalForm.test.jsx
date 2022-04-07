@@ -31,3 +31,13 @@ test("Should create new item when submit the form", () => {
   expect(screen.getByText(name)).toBeInTheDocument();
   expect(screen.getByText(price)).toBeInTheDocument();
 });
+
+test("modal don´t show if we pass modal status false", () => {
+  const { queryByTestId } = render(
+    <RecoilRoot>
+      <ModalForm setModal={false} />
+    </RecoilRoot>
+  );
+  const div = queryByTestId("modalForm");
+  expect(div).toBeTruthy();
+});

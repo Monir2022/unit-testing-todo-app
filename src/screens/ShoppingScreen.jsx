@@ -18,7 +18,7 @@ export default function ShoppingScreen() {
     setList(clonedList);
   }
   return (
-    <div data-testid ="shopping-Screen" className="normal-screen">
+    <div data-testid ="shopping-screen" className="normal-screen">
       <h1>My shopping list</h1>
       <Sorter />
       <ShoppingList list={pendingList} editList={editList} />
