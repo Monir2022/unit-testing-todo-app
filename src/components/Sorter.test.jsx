@@ -7,7 +7,7 @@ import { sortByName, sortByPrice } from "../scripts/sortList";
 jest.mock("../scripts/sortList");
 
 
-  test("Should call the sortByName function", () => {
+  test("Should call the sortByName function if I press on sortby name button", () => {
     
     const { getByTestId } = render(
       <RecoilRoot>
@@ -19,7 +19,8 @@ jest.mock("../scripts/sortList");
     expect(sortByName).toHaveBeenCalledTimes(1);
   });
 
-  test('Should call sortByPrice function',()=>{
+
+  test('Should call sortByPrice function if I press on sortby price function',()=>{
     const { getByTestId } = render(
         <RecoilRoot>
           <Sorter />
