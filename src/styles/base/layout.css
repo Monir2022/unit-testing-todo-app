@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
 .App {
+  font-family: "Roboto", sans-serif;
   text-align: center;
   margin: 48px;
 }
 body {
-  background-color: rgb(212, 192, 192);
+  background-color: rgb(255, 255, 255); 
+  
 }
 
 .App img {
@@ -11,18 +14,13 @@ body {
   height: auto;
 }
 
-
 h2,
 h3,
 h1,
-p
-span
- {
+p span {
   color: rgb(102, 85, 85);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
-
 
 .welcome-screen {
   max-width: 260px;
