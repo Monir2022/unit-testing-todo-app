@@ -23,7 +23,7 @@ export default function ModalForm({ modal, setModal }) {
   return (
     <div data-testid="modalForm" className="modalForm">
       <form onSubmit={(event) => handleSubmit(event)}>
-        <h2>Add a new Product</h2>
+        <h2>Add a new item</h2>
         <InputField
           settings={items.name}
           state={[name, setName]}

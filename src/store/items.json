@@ -1,12 +1,12 @@
 {
   "name": {
-    "label": "Product name",
+    "label": "Item name",
     "placeholder": "Ex: Chair",
     "required": true,
     "type": "text"
   },
   "price": {
-    "label": "Product price",
+    "label": "Item price",
     "max": 9999,
     "min": 1,
     "placeholder": "Ex: 500",
