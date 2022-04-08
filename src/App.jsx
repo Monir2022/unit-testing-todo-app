@@ -11,6 +11,8 @@ import { listState } from "./state/listState";
 import "./styles/styles.css";
 
 export default function App() {
+
+  //Global state
   const [list, setList] = useRecoilState(listState);
 
   const STORAGE_KEY = "shoppingList";
