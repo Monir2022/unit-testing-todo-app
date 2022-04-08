@@ -1,10 +1,10 @@
 import validatePrice from "./validateprice";
 
-test("fails if value is empty", () => {
-  const inputedValue = " ";
+test("Should fail if value is empty", () => {
+  const usedValue = " ";
   const error = "Price must be greater than zero";
 
-  const result = validatePrice(inputedValue);
+  const result = validatePrice(usedValue);
 
   expect(result.data).toBe(" ");
   expect(result.error).toBe(error);
@@ -12,17 +12,18 @@ test("fails if value is empty", () => {
 
 
 
-/*
-test("fails if value is negative", () => {
-  const inputedValue = "-4";
-  const error = "Price must be greater than 0";
 
-  const result = validatePrice(inputedValue, error);
+test("Should fail if value is negative", () => {
+  const usedValue = "-100";
+  const error = "Price must be greater than zero";
 
-  expect(result.validValue).toBe("");
-  expect(result.errorMessage).toBe(error);
+  const result = validatePrice(usedValue);
+
+  expect(result.data).toBe(" ");
+  expect(result.error).toBe(error);
 });
 
+/*
 test("fails if value is 0", () => {
   const inputedValue = "0";
   const error = "Price must be greater than 0";
@@ -32,6 +33,7 @@ test("fails if value is 0", () => {
   expect(result.validValue).toBe("");
   expect(result.errorMessage).toBe(error);
 });
+
 
 test("passes if value is positive", () => {
   const inputedValue = "20";
