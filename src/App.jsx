@@ -1,19 +1,21 @@
+//NPM packages
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
+
+//Project files
 import Logo from "./assets/images/logo.jpg";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import ShoppingScreen from "./screens/ShoppingScreen";
 import Modal from "./components/Modal";
 import { listState } from "./state/listState";
-
 import "./styles/styles.css";
-
 
 export default function App() {
   const [list, setList] = useRecoilState(listState);
 
   const STORAGE_KEY = "shoppingList";
 
+  //Methods
   function loadData(storageKey, setList) {
     const data = localStorage.getItem(storageKey);
     const parseddata = JSON.parse(data) ?? [];
