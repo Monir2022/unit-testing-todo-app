@@ -9,7 +9,7 @@ export default  function validatePrice (number) {
         error = " ";
     } else {
         data = " ";
-        error = "Price must be getter than zero"
+        error = "Price must be greater than zero"
     }
 
     return { data: data, error: error };
