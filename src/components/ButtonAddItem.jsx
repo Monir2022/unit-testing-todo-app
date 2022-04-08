@@ -5,9 +5,10 @@ import { modalState } from "../state/listState";
 export default function ButtonAddItem() {
   const [modal, setModal] = useRecoilState(modalState);
 
-  function openModal() {
-    setModal(<ModalForm setModal={setModal} />);
+  function openModal() {    
+   setModal(<ModalForm modal={modal} setModal={setModal} />);
   }
+
   return (
     <div className="button-wrapper">
       <button data-testid="addItem" onClick={openModal}>

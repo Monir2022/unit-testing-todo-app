@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import ShoppingScreen from './screens/ShoppingScreen';
 import { RecoilRoot } from "recoil";
 import App from './App';
 
@@ -19,13 +20,13 @@ test("Expected to show the Welcome screen if the todo list is empty", () => {
   expect(textElement).toBeInTheDocument();
 });
 
-/*
+
 test("Expected to show the shopingscreen if the todo list has one or more items", () => {
 
   // Arrange
   const {queryByTestId} = render(
     <RecoilRoot>
-      <App />
+      <ShoppingScreen />
     </RecoilRoot>)
 
   const data = [{
@@ -33,11 +34,8 @@ test("Expected to show the shopingscreen if the todo list has one or more items"
     name: "Table",
     price: 100,
     acquired: false
-  },
-  {id: 1,
-  name: "Table",
-  price: 100,
-  acquired: false} ];
+  }
+   ];
   
    
   Storage.prototype.getItem = jest.fn(() => JSON.stringify(data));
@@ -50,7 +48,7 @@ test("Expected to show the shopingscreen if the todo list has one or more items"
   // Assert
   expect(divElement).toBeTruthy();
 });
-*/
+
 
 
 
