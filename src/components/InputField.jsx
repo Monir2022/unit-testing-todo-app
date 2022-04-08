@@ -24,7 +24,7 @@ export default function InputField({ settings, state, validation }) {
         type={type}
         value={getter}
       />
-      <small>{errorMessage}</small>
+      <small className="message">{errorMessage}</small>
     </label>
   );
 }

@@ -8,7 +8,7 @@ export default function validateName(string){
         error = " "
     } else {
         data = " "
-        error = "You cant leave product name empty"
+        error = "You need a item name to start"
     }
 
 
