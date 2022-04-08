@@ -40,8 +40,7 @@ test("Expected to show the shopingscreen if the todo list has one or more items"
   }
    ]; 
    
-  Storage.prototype.getItem = jest.fn(() => JSON.stringify(data));
-  
+  Storage.prototype.getItem = jest.fn(() => JSON.stringify(data)); 
 
   // Act 
   const divElement = queryByTestId("shopping-screen")

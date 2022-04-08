@@ -22,7 +22,7 @@ test('Getting something from localStorage', () => {
 });
 
 
-it('Set something to be in localStorage', () => {
+it('Setting somthing to localStorage', () => {
 
 //Arrange  
 render(
