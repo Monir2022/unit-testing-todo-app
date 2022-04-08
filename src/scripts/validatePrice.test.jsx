@@ -34,15 +34,14 @@ test("Should fail if value is zero", () => {
   expect(result.error).toBe(error);
 });
 
-/*
-test("passes if value is positive", () => {
-  const inputedValue = "20";
-  const error = "Price must be greater than 0";
 
-  const result = validatePrice(inputedValue, error);
+test("Should pass if value is positive", () => {
+  const usedValue = "100";
+  const error = " ";
 
-  expect(result.validValue).toBe("20");
-  expect(result.errorMessage).toBe("");
+  const result = validatePrice(usedValue);
+
+  expect(result.data).toBe(100);
+  expect(result.error).toBe(" ");
 });
 
-*/
