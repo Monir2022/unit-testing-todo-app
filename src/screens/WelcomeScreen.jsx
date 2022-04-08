@@ -1,5 +1,5 @@
 import ButtonAddItem from "../components/ButtonAddItem";
-import HeroImage from "../assets/images/heroimage.png"
+import HeroImage from "../assets/images/todo list.jpg"
 
 export default function WelcomeScreen() {
   return (

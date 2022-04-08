@@ -56,7 +56,7 @@ test("Expected to show the shopingscreen if the todo list has one or more items"
 test("Adds an item when filling the form correctly", () => {
   // Arrange
   const correctName = "Table";
-  const correctPrice = "500";
+  const correctPrice = 500;
 
   render(<RecoilRoot>
     <App />
@@ -68,19 +68,20 @@ test("Adds an item when filling the form correctly", () => {
   fireEvent.click(firstButton);
 
   // Step 2
-  const writeName = screen.getByLabelText(/product name/i);
-  const writePrice = screen.getByLabelText(/product price/i);
+  const writeName = screen.getByLabelText(/item name/i);
+  const writePrice = screen.getByLabelText(/item price/i);
   const secondButton = screen.queryByText(/submit/i);
   fireEvent.change(writeName, { target: { value: correctName } });
   fireEvent.change(writePrice, { target: { value: correctPrice } });
   fireEvent.click(secondButton);
 
   // Step 3
-  const newTasks = screen.queryByText(/table, 500:-/i);
+  const newTasks = screen.queryByText(/table 500:-/i);
 
   // Assert
   expect(newTasks).toBeInTheDocument();
 });
+
 
 
 */
