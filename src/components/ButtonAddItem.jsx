@@ -1,12 +1,18 @@
-import ModalForm from "./ModalForm";
+//NPM packages
 import { useRecoilState } from "recoil";
 import { modalState } from "../state/listState";
 
+//Project files
+import ModalForm from "./ModalForm";
+
 export default function ButtonAddItem() {
+
+  //Global state
   const [modal, setModal] = useRecoilState(modalState);
 
-  function openModal() {    
-   setModal(<ModalForm modal={modal} setModal={setModal} />);
+  //Methods
+  function openModal() {
+    setModal(<ModalForm modal={modal} setModal={setModal} />);
   }
 
   return (

@@ -8,10 +8,16 @@ import validateName from "../scripts/validateName";
 import validatePrice from "../scripts/validatePrice";
 
 export default function ModalForm({ modal, setModal }) {
+
+  //Global state
   const [list, setList] = useRecoilState(listState);
+
+  //Local state
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
 
+
+//Method
   function handleSubmit(event) {
     event.preventDefault();
     const newItem = addNewItem(name, price, setModal);

@@ -7,6 +7,8 @@ import { useRecoilState } from "recoil";
 import { modalState } from "../state/listState";
 
 export default function Modal() {
+
+  //Global state
   const [modal, setModal] = useRecoilState(modalState);
 
   //Safeguard

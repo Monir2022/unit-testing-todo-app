@@ -6,6 +6,7 @@ export default function InputField({ settings, state, validation }) {
   const [getter, setter] = state;
   const [errorMessage, setErrorMessage] = useState(" ");
 
+//Methods
   function onValidate(callback, setState, setError) {
     const result = callback(getter);
     setState(result.data);

@@ -3,7 +3,10 @@ import { sortByName, sortByPrice } from "../scripts/sortList";
 import { listState } from "../state/listState";
 
 export default function Sorter() {
+  //Global state
   const [list, setList] = useRecoilState(listState);
+
+  //Methods
   function sortListByName(list) {
     const sortedList = sortByName(list);
     setList(sortedList);
@@ -13,12 +16,16 @@ export default function Sorter() {
     const sortedList = sortByPrice(list);
     setList(sortedList);
   }
-  
+
   return (
-    <section className='sorter'>
+    <section className="sorter">
       <span>Sort by:</span>
-      <button data-testid='byName'  onClick={() => sortListByName(list)}>Name</button>
-      <button data-testid='byPrice' onClick={() => sortListByPrice(list)}>Price</button>
+      <button data-testid="byName" onClick={() => sortListByName(list)}>
+        Name
+      </button>
+      <button data-testid="byPrice" onClick={() => sortListByPrice(list)}>
+        Price
+      </button>
     </section>
   );
 }
