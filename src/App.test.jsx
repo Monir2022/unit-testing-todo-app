@@ -2,6 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import { RecoilRoot } from "recoil";
 
+
 //Project files
 import ShoppingScreen from './screens/ShoppingScreen';
 import App from './App';
@@ -51,6 +52,13 @@ test("Expected to show the shopingscreen if the todo list has one or more items"
 });
 
 
-
+test('should save to localStorage', () => {
+  const KEY = 'foo',
+    VALUE = 'bar';
+  dispatch(action.update(KEY, VALUE));
+  expect(localStorage.setItem).toHaveBeenLastCalledWith(KEY, VALUE);
+  expect(localStorage.__STORE__[KEY]).toBe(VALUE);
+  expect(Object.keys(localStorage.__STORE__).length).toBe(1);
+});
 
 
